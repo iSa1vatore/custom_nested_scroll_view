@@ -163,7 +163,7 @@ class CustomNestedScrollView extends StatelessWidget {
     this.scrollBehavior,
     this.overscrollType = CustomOverscroll.outer,
   })  : _key = key,
-        super();
+        super(key: key);
 
   final Key? _key;
   final ScrollController? controller;
@@ -192,7 +192,8 @@ class CustomNestedScrollView extends StatelessWidget {
             headerSliverBuilder: headerSliverBuilder,
             body: body,
             dragStartBehavior: dragStartBehavior,
-            floatHeaderSlivers: false, //does not support floatHeaderSlivers
+            floatHeaderSlivers: false,
+            //does not support floatHeaderSlivers
             clipBehavior: clipBehavior,
             restorationId: restorationId,
             scrollBehavior: scrollBehavior,
@@ -206,7 +207,8 @@ class CustomNestedScrollView extends StatelessWidget {
             headerSliverBuilder: headerSliverBuilder,
             body: body,
             dragStartBehavior: dragStartBehavior,
-            floatHeaderSlivers: false, //does not support floatHeaderSlivers
+            floatHeaderSlivers: false,
+            //does not support floatHeaderSlivers
             clipBehavior: clipBehavior,
             restorationId: restorationId,
             scrollBehavior: scrollBehavior,
@@ -226,7 +228,7 @@ class CustomNestedScrollView extends StatelessWidget {
 }
 
 class CustomSliverOverlapAbsorber extends _SliverOverlapAbsorber {
-  CustomSliverOverlapAbsorber({
+  const CustomSliverOverlapAbsorber({
     Key? key,
     required _SliverOverlapAbsorberHandle handle,
     Widget? sliver,
@@ -246,7 +248,7 @@ class CustomSliverOverlapAbsorber extends _SliverOverlapAbsorber {
 }
 
 class CustomSliverOverlapInjector extends _SliverOverlapInjector {
-  CustomSliverOverlapInjector({
+  const CustomSliverOverlapInjector({
     Key? key,
     required _SliverOverlapAbsorberHandle handle,
     Widget? sliver,
@@ -266,7 +268,8 @@ class CustomSliverOverlapInjector extends _SliverOverlapInjector {
 }
 
 class CustomOverlapInjector extends StatelessWidget {
-  CustomOverlapInjector({
+  const CustomOverlapInjector({
+    super.key,
     this.overscrollType = CustomOverscroll.outer,
   });
 
@@ -284,7 +287,8 @@ class CustomOverlapInjector extends StatelessWidget {
 }
 
 class CustomOverlapAbsorber extends StatelessWidget {
-  CustomOverlapAbsorber({
+  const CustomOverlapAbsorber({
+    super.key,
     this.sliver,
     this.overscrollType = CustomOverscroll.outer,
   });
