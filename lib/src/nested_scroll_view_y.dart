@@ -148,7 +148,6 @@ class _NestedScrollCoordinatorY extends _NestedScrollCoordinator {
       minRange: 0,
       maxRange: 0,
       correctionOffset: 0,
-      devicePixelRatio: _outerPosition!.devicePixelRatio,
     );
   }
 
